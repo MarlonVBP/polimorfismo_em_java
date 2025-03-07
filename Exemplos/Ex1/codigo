@@ -1,0 +1,36 @@
+
+class MainEx1 {
+    public static void main(String[] args) {
+        Torcedor[] torcedores = { new Corinthians(), new Santos(), new Palmeiras() };
+        for (Torcedor t : torcedores) {
+            t.torcer();
+        }
+    }
+}
+
+class Torcedor {
+    void torcer() {
+        System.out.println("Torcendo pelo meu time!");
+    }
+}
+
+class Corinthians extends Torcedor {
+    @Override
+    void torcer() {
+        System.out.println("Vai Corinthians!");
+    }
+}
+
+class Santos extends Torcedor {
+    @Override
+    void torcer() {
+        System.out.println("Vai Santos!");
+    }
+}
+
+class Palmeiras extends Torcedor {
+    @Override
+    void torcer() {
+        System.out.println("Vai Palmeiras!");
+    }
+}

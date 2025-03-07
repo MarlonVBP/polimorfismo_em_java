@@ -1,0 +1,20 @@
+interface Pizza {
+    void preparar(); void assar(); void cobrar();
+}
+
+class PizzaAlhoBacon implements Pizza {
+    public void preparar() { System.out.println("Molho, queijo, alho e bacon"); }
+    public void assar() { System.out.println("18 minutos"); }
+    public void cobrar() { System.out.println("R$ 17,00"); }
+    public void adicionarBordaCatupiry() { System.out.println("Borda recheada com catupiry adicionada!"); }
+}
+
+class MainEx6 {
+    public static void main(String[] args) {
+        PizzaAlhoBacon pizza = new PizzaAlhoBacon();
+        pizza.preparar();
+        pizza.assar();
+        pizza.cobrar();
+        pizza.adicionarBordaCatupiry(); // Novo método para exemplo
+    }
+}

@@ -1,0 +1,22 @@
+interface TipoEntrega { void entregar(); }
+
+class Motoboy implements TipoEntrega {
+    public void entregar() { System.out.println("Entrega feita pelo motoboy!"); }
+}
+
+class Correios implements TipoEntrega {
+    public void entregar() { System.out.println("Entrega feita pelos Correios!"); }
+}
+
+class Transportadora implements TipoEntrega {
+    public void entregar() { System.out.println("Entrega feita pela Transportadora!"); }
+}
+
+class MainEx8 {
+    public static void main(String[] args) {
+        TipoEntrega[] entregas = { new Motoboy(), new Correios(), new Transportadora() };
+        for (TipoEntrega e : entregas) {
+            e.entregar();
+        }
+    }
+}

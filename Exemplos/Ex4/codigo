@@ -1,0 +1,21 @@
+class MainEx4 {
+    public static void main(String[] args) {
+        PizzaNapolitana pizza = new PizzaNapolitana();
+        pizza.preparar();
+        pizza.assar();
+        pizza.cobrar();
+    }
+}
+
+class PizzaCalabresa {
+    void preparar() { System.out.println("Molho, queijo, calabresa, cebola e tomate"); }
+    void assar() { System.out.println("15 minutos"); }
+    void cobrar() { System.out.println("R$ 12,00"); }
+}
+
+class PizzaNapolitana extends PizzaCalabresa {
+    @Override
+    void preparar() { System.out.println("Molho, queijo, tomate, manjericão"); }
+    @Override
+    void cobrar() { System.out.println("R$ 15,00"); }
+}

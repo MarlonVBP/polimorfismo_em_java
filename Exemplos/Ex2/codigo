@@ -1,0 +1,31 @@
+interface ITorcedor {
+  // Interface para abstração
+    void torcer(); 
+}
+
+class CorinthiansInterface implements ITorcedor {
+    public void torcer() {
+        System.out.println("Vai Corinthians!");
+    }
+}
+
+class SantosInterface implements ITorcedor {
+    public void torcer() {
+        System.out.println("Vai Santos!");
+    }
+}
+
+class PalmeirasInterface implements ITorcedor {
+    public void torcer() {
+        System.out.println("Vai Palmeiras!");
+    }
+}
+
+class MainEx2 {
+    public static void main(String[] args) {
+        ITorcedor[] torcedores = { new CorinthiansInterface(), new SantosInterface(), new PalmeirasInterface() };
+        for (ITorcedor t : torcedores) {
+            t.torcer();
+        }
+    }
+}

@@ -1,0 +1,22 @@
+interface TipoPagamento { void pagar(double valor); }
+
+class Dinheiro implements TipoPagamento {
+    public void pagar(double valor) { System.out.println("Pagamento em dinheiro. Não tem taxa!"); }
+}
+
+class CartaoCredito implements TipoPagamento {
+    public void pagar(double valor) { System.out.println("Pagamento em cartão. Taxa de: " + (valor * 0.2)); }
+}
+
+class Boleto implements TipoPagamento {
+    public void pagar(double valor) { System.out.println("Pagamento em boleto. Taxa fixa R$0,80"); }
+}
+
+class MainEx7 {
+    public static void main(String[] args) {
+        TipoPagamento[] pagamentos = { new Dinheiro(), new CartaoCredito(), new Boleto() };
+        for (TipoPagamento p : pagamentos) {
+            p.pagar(100);
+        }
+    }
+}
